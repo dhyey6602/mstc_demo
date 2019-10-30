@@ -1,0 +1,153 @@
+/*
+NOTE: for future references
+    0-600px:        phone
+    600px-900px:    tab-portrait
+    900px-1200px:   tab-landscape
+    1200-1800:      is where our normal styles apply
+    1800+:          big-desktop
+*/
+
+
+
+.composition {
+    position: relative; 
+}
+.container {
+    position: relative;
+}
+
+.composition__photo {
+    width: 100%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+
+    z-index: 10;
+    transition: all 0.4s;
+    backface-visibility: hidden; 
+}
+
+/* 
+.composition__photo:hover {
+
+    opacity: 0.3;
+} */
+.composition__text {
+    opacity: 0;
+    text-align: center;
+    color: #444;
+    transition: all 0.4s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    width: 100%;
+
+}
+
+@media(max-width: 75em) {
+    .composition__text {
+        font-size: 1rem;
+    }
+}
+
+
+@media(max-width: 56.25em) {
+    .composition__text {
+        font-size: 1.7rem;
+    }
+}
+
+.container:hover .composition__text {
+    opacity: 1;
+}
+
+.container:hover .composition__photo {
+    opacity: 0.3;
+    transform: scale(1.2); 
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+
+
+.footer {
+    background-color: #333;
+    padding: 5rem 0;
+    font-size: 1.4rem; 
+}
+
+
+.footer__copyright {
+    border-top: 0.2px solid #999;
+    padding-top: 2rem;
+    width: 100%;
+    text-align: center; 
+}
+
+.footer-social__icon {
+    width: 100%;
+    height: auto;
+    /* margin: auto; */
+}
+
+.footer-social__icon ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+    float: left;
+}
+
+.footer-social__icon ul li {
+    display: inline-block;
+    margin: 0 2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    text-decoration: none;
+    width: 5rem;
+    height: 5rem;
+}
+
+.footer-social__icon ul li a {
+    font-size: 2.5rem;    
+    color: #333;
+}
+
+.footer-social__icon ul li a i{
+    line-height: 50px;
+}
+hr {
+    border: 0.7px solid #f7f7f7;
+}
+
+
+.footer-text-center{
+    margin-left: 2.2rem;
+}
+
+.footer-contact {
+    margin:0;padding:0;margin-left: 12rem;
+}
+
+.footer-contact-text {
+
+}
+
+@media(max-width: 56.25em) {
+
+.footer-text-center {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+}
+
+.footer-contact {
+    margin-left: 0;
+}
+
+.footer-contact-text {
+    text-align: center;
+}
+}
+
